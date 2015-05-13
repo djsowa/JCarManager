@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" connectionString="Data Source=.;Initial Catalog=jcar_NHDESIGNER;User Id=sa;Password=3A/,NNmV=LhY;" name="" defaultIdentityGenerator="IdentityColumn" xmlns="http://namespaces.mindscape.co.nz/nhmodel">
+  <entities>
+    <entity name="Test">
+      <entityProperties>
+        <entityProperty name="Date" isNullable="true" dataType="DateTime" />
+        <entityProperty name="Name" isNullable="true" />
+      </entityProperties>
+      <identityProperties>
+        <identityProperty name="TestId" generator="IdentityColumn" />
+      </identityProperties>
+    </entity>
+    <entity name="Test2">
+      <entityProperties>
+        <entityProperty name="Date" dataType="DateTime" />
+      </entityProperties>
+      <identityProperties>
+        <identityProperty name="Test2Id" generator="IdentityColumn" />
+      </identityProperties>
+      <oneToOneAssociations>
+        <oneToOneAssociation Id="f60aa370-9fda-4d8a-a4bf-5a1543ddf1fe" sourceName="Test2" targetName="Test" cascadeSavesToSource="SaveUpdate" cascadeSavesToTarget="SaveUpdate">
+          <entityMoniker name="//Test" />
+        </oneToOneAssociation>
+      </oneToOneAssociations>
+    </entity>
+  </entities>
+</model>
