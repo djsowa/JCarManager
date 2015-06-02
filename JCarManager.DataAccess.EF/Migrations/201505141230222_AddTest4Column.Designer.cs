@@ -7,13 +7,13 @@ namespace JCarManager.DataAccess.EF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Car_AddTestColumn : IMigrationMetadata
+    public sealed partial class AddTest4Column : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Car_AddTestColumn));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddTest4Column));
         
         string IMigrationMetadata.Id
         {
-            get { return "201505121139345_Car_AddTestColumn"; }
+            get { return "201505141230222_AddTest4Column"; }
         }
         
         string IMigrationMetadata.Source

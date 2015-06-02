@@ -27,7 +27,7 @@ namespace JCarManager.DataAccess.nHibernate
             _configuration = CreateConfiguration();
             _sessionFactory = _configuration.BuildSessionFactory();
 
-            ExportSchema();
+            //ExportSchema();
         }
 
         private static Configuration CreateConfiguration()

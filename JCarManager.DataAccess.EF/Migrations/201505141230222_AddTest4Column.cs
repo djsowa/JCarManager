@@ -3,18 +3,16 @@ namespace JCarManager.DataAccess.EF.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Car_AddTestColumn : DbMigration
+    public partial class AddTest4Column : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Car", "Test2", c => c.String());
-
-            Sql("UPDATE dbo.Car SET TEst2 = 'funky test';");
+            AddColumn("dbo.Car", "Test4", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Car", "Test2");
+            DropColumn("dbo.Car", "Test4");
         }
     }
 }

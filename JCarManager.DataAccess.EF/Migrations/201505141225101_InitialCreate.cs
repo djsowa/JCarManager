@@ -12,6 +12,8 @@ namespace JCarManager.DataAccess.EF.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Test2 = c.String(),
+                        Test3 = c.String(),
                         RegistrationNumber = c.String(),
                         VehicleNumber = c.String(),
                         Description = c.String(),

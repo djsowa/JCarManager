@@ -24,12 +24,15 @@ namespace JCarManager.DataAccess.nHibernate
         public bool Add(T entity)
         {
             _session.Save(entity);
-            _session.Flush();
+           // _session.Flush();
             return true;
         }
 
         public bool Update(T entity)
         {
+            //_session.CreateSQLQuery("").AddEntity(typeof (Car)).List();
+
+
             _session.SaveOrUpdate(entity);
             return true;
         }

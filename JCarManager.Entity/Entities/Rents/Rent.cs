@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JCarManager.Entity.Entities.Cars;
 using JCarManager.Entity.Entities.Customers;
 
 namespace JCarManager.Entity.Entities.Rents
@@ -20,6 +21,9 @@ namespace JCarManager.Entity.Entities.Rents
         //[ForeignKey("Id")]
         public virtual RentType RentType { get; set; }
 
+        public Car Car { get; set; }
+
+        public int CoveredDistance { get; set; }
 
         public virtual DateTime StartDate { get; set; }
         public virtual DateTime EndDate { get; set; }

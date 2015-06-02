@@ -16,12 +16,14 @@ namespace JCarManager.Entity.Entities.Cars
         
         public virtual int Id { get; set; }
         public virtual string Test2 { get; set; }
+        public virtual string Test3 { get; set; }
+        public virtual string Test4 { get; set; }
         public virtual string RegistrationNumber { get; set; }
         public virtual string VehicleNumber { get; set; }
-        public virtual List<EngineDetails> EngineDetails { get; set; }
+        public virtual IList<EngineDetails> EngineDetails { get; set; }
         public virtual string Description { get; set; }
         public virtual BodyTypeEnum BodyType { get; set; }
-        public virtual List<CarEquipment> CarEquipment { get; set; }
+        public virtual IList<CarEquipment> CarEquipment { get; set; }
         public virtual CarStatusEnum CarStatus { get; set; }
         public virtual CarGroupTypeEnum GroupTypeEnum { get; set; }
 

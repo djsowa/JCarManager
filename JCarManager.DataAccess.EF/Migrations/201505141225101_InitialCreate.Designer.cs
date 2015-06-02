@@ -13,7 +13,7 @@ namespace JCarManager.DataAccess.EF.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201505112046391_InitialCreate"; }
+            get { return "201505141225101_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

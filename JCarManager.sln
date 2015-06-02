@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCarManager.DataAccess.EF",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCarManager.DataAccess.Common", "JCarManager.DataAccess.Common\JCarManager.DataAccess.Common.csproj", "{06BA400F-F3A4-4E8F-B2EE-12CAE565912B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCarManager_NH", "JCarManager_NH\JCarManager_NH.csproj", "{D6E115A5-0F7B-4CEC-83D9-308D31E7FC02}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "JCarManager.SSDT.NH", "JCarManager.SSDT.NH\JCarManager.SSDT.NH.sqlproj", "{53ABE21E-4E58-421F-A581-50B523C9D0DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCarManager.Business", "JCarManager.Business\JCarManager.Business.csproj", "{2DA6DF6F-583B-4F0F-A1F3-0E1EACE5CA9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +51,20 @@ Global
 		{06BA400F-F3A4-4E8F-B2EE-12CAE565912B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06BA400F-F3A4-4E8F-B2EE-12CAE565912B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06BA400F-F3A4-4E8F-B2EE-12CAE565912B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E115A5-0F7B-4CEC-83D9-308D31E7FC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E115A5-0F7B-4CEC-83D9-308D31E7FC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E115A5-0F7B-4CEC-83D9-308D31E7FC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E115A5-0F7B-4CEC-83D9-308D31E7FC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53ABE21E-4E58-421F-A581-50B523C9D0DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53ABE21E-4E58-421F-A581-50B523C9D0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53ABE21E-4E58-421F-A581-50B523C9D0DD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{53ABE21E-4E58-421F-A581-50B523C9D0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53ABE21E-4E58-421F-A581-50B523C9D0DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53ABE21E-4E58-421F-A581-50B523C9D0DD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2DA6DF6F-583B-4F0F-A1F3-0E1EACE5CA9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA6DF6F-583B-4F0F-A1F3-0E1EACE5CA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA6DF6F-583B-4F0F-A1F3-0E1EACE5CA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA6DF6F-583B-4F0F-A1F3-0E1EACE5CA9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

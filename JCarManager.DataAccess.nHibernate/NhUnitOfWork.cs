@@ -17,7 +17,7 @@ namespace JCarManager.DataAccess.nHibernate
         public NhUnitOfWork()
         {
             _session = NhProvider.CreateSession();
-            _session.FlushMode = FlushMode.Commit;
+            _session.FlushMode = FlushMode.Unspecified;
         }
 
 

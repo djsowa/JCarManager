@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JCarManager.DataAccess;
 using JCarManager.Entity.Entities.Cars;
 using JCarManager.Entity.Entities.Customers;
 
-namespace JCarManager
+namespace JCarManager.DataAccess
 {
-    internal class TestDataGenerator
+    public class TestDataGenerator
     {
-        internal static void GenerateCustomerData()
+        public static void GenerateCustomerData()
         {
-            using (var unit = UnitOfWorkFactory.CreateUnitOfWork())
+            using (var unit = UnitOfWorkFactory.CreateUnitOfWork(true))
             {
                 unit.BeginTransaction();
 
@@ -40,17 +36,19 @@ namespace JCarManager
         }
 
 
-        internal static void GenerateCarData()
+        public static void GenerateCarData()
         {
-            using (var unit = UnitOfWorkFactory.CreateUnitOfWork())
+            using (var unit = UnitOfWorkFactory.CreateUnitOfWork(true))
             {
                 unit.BeginTransaction();
 
                 var carRepository = unit.GetRepository<Car>();
+                var engineRepository = unit.GetRepository<EngineDetails>();
 
                 for (int i = 0; i < 5000; i++)
                 {
                     var randomGenerator = new Random(i);
+
                     var car = new Car()
                     {
                         BodyType = (BodyTypeEnum)Enum.Parse(typeof(BodyTypeEnum), randomGenerator.Next(1, 5).ToString(CultureInfo.InvariantCulture)),
@@ -58,11 +56,10 @@ namespace JCarManager
                         RegistrationNumber = string.Format("SK {0}", i.ToString(CultureInfo.InvariantCulture).PadLeft(5, '0')),
                         VehicleNumber = string.Format("{0}", Guid.NewGuid().ToString("N")),
                         Description = "Opel is a great car !!!",
-                        GroupTypeEnum = (CarGroupTypeEnum)Enum.Parse(typeof(CarGroupTypeEnum), randomGenerator.Next(1, 5).ToString(CultureInfo.InvariantCulture)),
-
+                        GroupTypeEnum = (CarGroupTypeEnum)Enum.Parse(typeof(CarGroupTypeEnum), randomGenerator.Next(1, 5).ToString(CultureInfo.InvariantCulture))
                     };
 
-                    car.EngineDetails.Add(new EngineDetails()
+                    var engine = new EngineDetails()
                     {
                         Capacity = randomGenerator.Next(1, 3),
                         Car = car,
@@ -75,8 +72,14 @@ namespace JCarManager
                         FuelType = FuelTypeEnum.Gasoline,
                         HorsePower = randomGenerator.Next(75, 250),
 
-                    });
+                    };
+
                     carRepository.Add(car);
+
+                    engineRepository.Add(engine);
+
+                    car.EngineDetails.Add(engine);
+                   
                 }
 
                 unit.Commit();
@@ -84,9 +87,9 @@ namespace JCarManager
         }
 
 
-        internal static void GenerateEquipmentData()
+        public static void GenerateEquipmentData()
         {
-            using (var unit = UnitOfWorkFactory.CreateUnitOfWork())
+            using (var unit = UnitOfWorkFactory.CreateUnitOfWork(true))
             {
                 unit.BeginTransaction();
 

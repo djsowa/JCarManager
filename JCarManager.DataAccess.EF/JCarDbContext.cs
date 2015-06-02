@@ -17,7 +17,7 @@ namespace JCarManager.DataAccess.EF
         public JCarDbContext()
             : base("JCarDbEntityFM")
         {
-            Database.SetInitializer<JCarDbContext>(new System.Data.Entity.DropCreateDatabaseIfModelChanges<JCarDbContext>());
+            //Database.SetInitializer<JCarDbContext>(new System.Data.Entity.DropCreateDatabaseIfModelChanges<JCarDbContext>());
         }
 
         public DbSet<Car> Cars { get; set; }
